@@ -1,0 +1,73 @@
+@font-face{
+    font-family: 'Elementary_Gothic_Bookhand';
+    src: url('../FONT/Elementary_Gothic_Bookhand.ttf');
+}
+@font-face{
+    font-family: 'JaymontLii_PERSONAL_USE';
+    src: url('../FONT/AppleGaramond-Italic.ttf');
+}
+
+
+body{
+    background-color:rgb(104, 155, 236);
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+
+}
+*{
+    box-sizing: border-box;
+}
+.content{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+}
+.box1{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 380px;
+   min-height: 50px;
+   background-color: white;
+   padding:30px;
+ 
+  line-height: 2;
+  box-shadow: 0 3px 6px rgba(0, 0,0, 0.16), 0 6px 10px rgba(0, 0,0, 0.23);
+}
+.f-inp label{
+    font-family: 'Elementary_Gothic_Bookhand';
+    font-size: 12px;
+    color:gray;
+}
+.f-inp input{
+    width:100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'JaymontLii_PERSONAL_USE';
+    border:none;
+    border-radius: 10px;
+    background-color:rgba(144, 181, 241, 0.774);
+}
+.btn{
+    text-align: left;
+    
+}
+.btn button{
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 30px;
+    border: none;
+    font-family: 'JaymontLii_PERSONAL_USE';
+    font-size:18px;
+    border-radius: 10px;
+}
+.btn button:hover{
+    background-color: whitesmoke;
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16), 0 6px 10px rgba(0, 0,0, 0.23);
+}

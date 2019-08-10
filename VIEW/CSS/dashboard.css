@@ -1,0 +1,102 @@
+.cont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 90%;
+    min-height: 650px;
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16), 0 6px 10px rgba(0, 0,0, 0.23);
+}
+.content div{
+    text-align: left;
+}
+.tete{
+    display: flex;
+    flex-direction: column;
+}
+.t{
+    width: 100%;
+}
+.t:first-child{
+    background-color: rgba(26, 25, 25, 0.712);
+    padding: 0px 10px;
+    margin: 0;
+}
+.t:first-child h1{
+    font-family: 'Elementary_Gothic_Bookhand';
+    font-size: 20px;
+}
+.t:last-child{
+    text-align: right;
+    padding: 10px 25px;
+    display: inline;
+    font-family: 'Elementary_Gothic_Bookhand';
+}
+.cont1{
+    display: flex;
+    flex-direction: row;
+}
+.cont1 center{
+    font-family: 'Elementary_Gothic_Bookhand';
+    font-size: 12px;
+}
+hr{
+    margin: 0;
+}
+.cont1 .menu{
+    width: 20%;
+    background-color: whitesmoke;
+   
+}
+.menu{
+    border-right: 3px solid gray;
+}
+.cont1 .c2{
+    width: 80%;
+    background-color: white;
+    padding: 0px 15px;
+}
+.menu ul {
+    
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-family: 'JaymontLii_PERSONAL_USE';
+    font-size: 15px;
+    display: block;
+    cursor: pointer;
+    color: rgb(104, 155, 236);
+}
+.menu ul li{
+    list-style-type: none;
+    margin-bottom: 2px;
+    padding: 5px 12px;
+}
+.menu ul li a:hover{
+    text-decoration: underline;
+}
+.wlc{
+    width: 100%;
+}
+.el1{
+    width: 100%;
+    text-align: center;
+    font-family: 'Elementary_Gothic_Bookhand';
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16), 0 6px 10px rgba(0, 0,0, 0.23);
+    padding:5px 20px;
+    margin-top: 10px;
+}
+.el2{
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16), 0 6px 10px rgba(0, 0,0, 0.23);
+    padding:5px 20px;
+    margin-top: 10px;
+}
+.el2 h4{
+    font-family: 'Elementary_Gothic_Bookhand';
+}
+.el2 p{
+    font-family: 'JaymontLii_PERSONAL_USE';
+}

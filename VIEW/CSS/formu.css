@@ -1,0 +1,101 @@
+.f1{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 15px;
+}
+.f2{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 15px;
+}
+.f1 div{
+    width: 50%;
+}
+.f2 div{
+    width: 100%;
+}
+.f1 div label{
+    margin-right: 10px;
+    font-family: 'Elementary_Gothic_Bookhand';
+    font-size: 12px;
+}
+.f1 div input{
+    width:95%;
+    height: 35px;
+    margin-top: 8px;
+    padding: 5px 10px;
+    font-family: 'JaymontLii_PERSONAL_USE';
+    font-size:20px;
+}
+.f2 div input{
+    width:95%;
+    height: 35px;
+    margin-top: 8px;
+    padding: 5px 10px;
+    font-family: 'JaymontLii_PERSONAL_USE';
+    font-size:20px;
+}
+.f2 div label{
+    margin-right: 10px;
+    font-family: 'Elementary_Gothic_Bookhand';
+    font-size: 12px;
+}
+.f2 div select{
+    width: 98%;
+    height: 35px;
+    font-family: 'JaymontLii_PERSONAL_USE';
+    font-size:20px;
+}
+.f2 div{
+    width: 100%;
+}
+.btn1{
+    text-align: right;
+    padding: 10px;
+}
+.btn1 button{
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'JaymontLii_PERSONAL_USE';
+    font-size:18px;
+}
+.btn1 button:hover{
+    background-color: whitesmoke;
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16), 0 6px 10px rgba(0, 0,0, 0.23);
+}
+.search{
+    padding: 10px 0px;
+}
+.search input{
+    width:55%;
+    height: 35px;
+    margin-top: 8px;
+    padding: 5px 10px;
+    font-family: 'JaymontLii_PERSONAL_USE';
+    font-size:20px;
+}
+.search button{
+    border: none;
+    border-radius: 30px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+.search button:hover{
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16), 0 6px 10px rgba(0, 0,0, 0.23);
+    
+}
+.c2{
+    background-color:red;
+}
+.sel{
+    width: 90%;
+    height: 35px;
+    font-family: 'JaymontLii_PERSONAL_USE';
+    font-size:20px;
+}
+.sel option{
+    color: black;
+}
