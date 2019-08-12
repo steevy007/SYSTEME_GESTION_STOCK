@@ -25,30 +25,30 @@
                             </div>
                             <div class="el2">
                                 <div class="formu">
-                                    <form action="">
+                                    <form action="../CONTROLLER/ajouterarticle.controller.php" method="GET">
                                         <div class="f2">
                                            <div>
                                            <label for="">Nom de l'article</label><br>
-                                            <input type="text" placeholder="saisir le nom de l article">
+                                            <input type="text" placeholder="saisir le nom de l article" name="nom" required>
                                            </div>
                                         </div>
 
                                         <div class="f2">
                                            <div>
                                            <label for="">Description de l'article</label><br>
-                                            <input type="text" placeholder="Description de l'article">
+                                            <input type="text" placeholder="Description de l'article" name="description" required>
                                            </div>
                                         </div>
 
                                         <div class="f2">
                                            <div>
                                            <label for="">Prix de l'article</label><br>
-                                            <input type="number" placeholder="saisir le prix de l'article">
+                                            <input type="number" placeholder="saisir le prix de l'article" name="prix" required>
                                            </div>
                                         </div>
 
                                         <div class="btn1">
-                                            <button type="submit">Enregistrer</button>
+                                            <button type="submit" name="btn">Enregistrer</button>
                                             <button type="reset">Nouveau</button>
                                        </div>
                                     </form>

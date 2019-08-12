@@ -1,6 +1,19 @@
 <?php
   session_start();
   $username=$_SESSION['nom'];
+  $upassword=$_SESSION['password'];
+  require_once('../MODEL/article.php');
+  $id="";
+  $nom="";
+  $description="";
+  $prix="";
+
+  if(isset($_GET['id'])){
+    $id=$_GET['id'];
+    $nom=$_GET['nom'];
+    $description=$_GET['description'];
+    $prix=$_GET['prix'];
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,17 +33,16 @@
                <?php require_once('menu.php') ?>
 
                     <div class="c2">
-                            <div class="el1">
-                                <h3>Modifier Article</h3>
-                            </div>
+                            <center> <h3>Modifier Article</h3></center>                       
                             <div class="el2">
                             <div class="search">
                                         <center>
                                             <div>
-                                                <form action="" method="post">
-                                                    <input type="text" placeholder="veuillez saisir l'identifiant de l'entite">
-                                                    <button><img src="ICONES/icons8_Search_25px.png" alt=""></button>
-                                                </form>
+                                            <form action="../CONTROLLER/modifierarticle1.controller.php" method="GET">
+                                                   <select name="numero" class="sel">
+                                                     
+                                                          <option  value="<?php print($id)?>"><?php print($id)?></option>                                                          
+                                               </select>                                   
                                             </div>
                                         </center>
                                    </div>
@@ -39,27 +51,26 @@
                                         <div class="f2">
                                            <div>
                                            <label for="">Nom de l'article</label><br>
-                                            <input type="text" placeholder="saisir le nom de l article">
+                                            <input type="text" value="<?php print($nom)?>" placeholder="saisir le nom de l article" name="nom" required>
                                            </div>
                                         </div>
 
                                         <div class="f2">
                                            <div>
                                            <label for="">Description de l'article</label><br>
-                                            <input type="text" placeholder="Description de l'article">
+                                            <input type="text" value="<?php print($description)?>" placeholder="Description de l'article" name="description" required>
                                            </div>
                                         </div>
 
                                         <div class="f2">
                                            <div>
                                            <label for="">Prix de l'article</label><br>
-                                            <input type="number" placeholder="saisir le prix de l'article">
+                                            <input type="number" value="<?php print($prix)?>" placeholder="saisir le prix de l'article" name="prix" required>
                                            </div>
                                         </div>
 
                                         <div class="btn1">
-                                            <button type="submit">Modifier</button>
-                                            <button type="reset">Nettoyer</button>
+                                            <button type="submit" name="btn">Modifier</button>
                                        </div>
                                     </form>
                                 </div>

@@ -12,8 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <?php require_once('CSS.php') ?>
- 
+    <?php require_once('CSS.php'); ?>
     <title>Consulter Client</title>
 </head>
 <body>
@@ -29,8 +28,21 @@
                                 <h3>Consulter Client</h3>
                             </div>
                             <div class="el2">
-                            <table class="mdl-data-table" id="example" style="width:100%">
-        <thead>
+                            <div class="">
+    <div>
+        
+    </div>
+    <div class="scroll">
+    <div class="panel">
+        <div class="body">
+            <div class="input-group">
+                <label for="searchBox">Recherché</label>
+                <input type="search" id="searchBox" placeholder="Recherché...">
+            </div>
+        </div>
+    </div>
+    <table class="myTable table hover">
+    <thead>
             <tr>
                 <th>Numero</th>
                 <th>Nom</th>
@@ -55,12 +67,15 @@
                     <td><?php print($result[5]); ?></td>
                     <td><?php print($result[6]); ?></td>
                     <td><?php print($result[7]); ?></td>
-                    <td>
-                                    
-                                   
-                                    <a href="../CONTROLLER/modifierclient.controller?ID=<?php print($result[0]); ?>" ><img src="ICONES/icons8_Edit_24px.png" alt="" title="Modifier <?php print($result[1])?>"></i></a>
-                                    
-                                </td>
+                    <?php
+                        if($username=='STEEVE'){
+                    ?>
+                    <td> 
+                      <a href="../CONTROLLER/modifierclient.controller?ID=<?php print($result[0]); ?>" ><img src="ICONES/icons8_Edit_24px.png" alt="" title="Modifier <?php print($result[1])?>"></i></a>           
+                     </td>
+                     <?php
+                        }
+                     ?>
                 </tr>
            <?php
                }
@@ -80,16 +95,17 @@
             </tr>
             </tr>
         </tfoot>
+    
     </table>
+    </div>
+</div>
+
                                 </div>
                     </div>
         </div>
     </div>
     
-    <?php
-        require_once('JS.php');
-    ?>
-
+    <?php require_once('JS.php'); ?>
     
 </body>
 </html>

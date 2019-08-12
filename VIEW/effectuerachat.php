@@ -1,6 +1,11 @@
 <?php
   session_start();
   $username=$_SESSION['nom'];
+  $password=$_SESSION['password'];
+  require_once('../MODEL/achat.php');
+  $AC=new achat("",0,0,0,0);
+  $reponse=$AC-> listerIDCL($username,$password);
+  $reponse1=$AC-> listerIDAR($username,$password);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,32 +30,49 @@
                             </div>
                             <div class="el2">
                             <div class="formu">
-                                    <form action="">
+                                    <form action="../CONTROLLER/effectuerachat.controller.php" method="GET">
                                         <div class="f2">
                                            <div>
                                            <label for="">Identifiant du client</label><br>
-                                            <input type="text" placeholder="saisir l'identifiant du client">
+                                             <select name="numeroCL" class="sel">
+                                                 <?php
+                                                    while($data=mysqli_fetch_array($reponse)){
+                                                 ?>
+                                                          <option  value="<?php print($data[0]) ?>"><?php print($data[0]) ?></option>
+                                                <?php
+                                                    }
+                                                ?>
+                                                   </select>
                                            </div>
                                         </div>
 
                                         <div class="f2">
                                            <div>
                                            <label for="">Identifiant Article</label><br>
-                                            <input type="text" placeholder="saisir l'identifiant de l'article">
+                                           <select name="numeroAR" class="sel">
+                                           <?php
+                                                    while($data=mysqli_fetch_array($reponse1)){
+                                                 ?>
+                                                          <option  value="<?php print($data[0]) ?>"><?php print($data[0]) ?></option>
+                                                <?php
+                                                    }
+                                                ?>
+                              ;                     </select>
                                            </div>
                                         </div>
 
                                         <div class="f2">
                                            <div>
                                            <label for="">Quantite Article</label><br>
-                                            <input type="number" placeholder="saisir le nombre d'article">
+                                            <input type="number" name="quantite" placeholder="saisir le nombre d'article" required>
                                            </div>
                                         </div>
 
                                         <div class="btn1">
-                                            <button type="submit">Enregistrer</button>
+                                            <button type="submit" name="btn">Enregistrer</button>
                                             <button type="reset">Nouveau</button>
                                        </div>
+                                       </form>
                                 </div>
                     </div>
         </div>

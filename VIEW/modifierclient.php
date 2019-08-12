@@ -43,8 +43,9 @@
                <?php require_once('menu.php') ?>
 
                     <div class="c2">
-                            
+                    <center><h3>Modifier Client</h3></center>
                             <div class="el2">
+                            
                             <div class="search">
                                         <center>
                                             <div>
@@ -66,22 +67,22 @@
                                        <div class="f1">
                                             <div>
                                                 <label for="">Nom du Client </label>
-                                                <input type="text" placeholder="Nom du Client" name="nom" value="<?php print $nom ?>">
+                                                <input type="text" placeholder="Nom du Client" name="nom" value="<?php print $nom ?>" required>
                                             </div>
                                             <div>
                                                 <label for="">Prenom du Client</label>
-                                                <input type="text" placeholder="Nom du Client" name="prenom" value="<?php print $prenom ?>">
+                                                <input type="text" placeholder="Nom du Client" name="prenom" value="<?php print $prenom ?>" required>
                                             </div>
                                        </div>
                                        
                                        <div class="f1">
                                             <div>
                                                 <label for="">Code Postal</label>
-                                                <input type="text" placeholder="Nom du Client" name="code"value="<?php print $code ?>">
+                                                <input type="text" placeholder="Nom du Client" name="code"value="<?php print $code ?>" required>
                                             </div>
                                             <div>
                                                 <label for="">Ville</label>
-                                                <input type="text" placeholder="Nom du Client" name="ville"value="<?php print $ville ?>">
+                                                <input type="text" placeholder="Nom du Client" name="ville"value="<?php print $ville ?>" required>
                                             </div>
                                        </div>
 
@@ -92,7 +93,7 @@
                                             </div>
                                             <div>
                                             <label for="">Adresse</label>
-                                                <input type="text" placeholder="Adresse du Client" name="adresse" reuired value="<?php print $adresse ?>">
+                                                <input type="text" placeholder="Adresse du Client" name="adresse" reuired value="<?php print $adresse ?>" required>
                                             
                                             </div>
                                        </div>
@@ -111,7 +112,7 @@
                                        </div>
                                        <div class="btn1">
                                             <button type="submit" name="btn">Modifier</button>
-                                            <button type="reset">Nettoyer</button>
+                                         
                                        </div>
                                     </form>
                                </div>
