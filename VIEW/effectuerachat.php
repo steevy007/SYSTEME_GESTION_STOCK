@@ -3,7 +3,7 @@
   $username=$_SESSION['nom'];
   $password=$_SESSION['password'];
   require_once('../MODEL/achat.php');
-  $AC=new achat("",0,0,0,0);
+  $AC=new achat("",0,0,0,0,0,0);
   $reponse=$AC-> listerIDCL($username,$password);
   $reponse1=$AC-> listerIDAR($username,$password);
 ?>

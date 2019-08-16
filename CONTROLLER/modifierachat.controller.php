@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('../MODEL/achat.php');
-$AC=new achat("",0,0,0,0);
+$AC=new achat("",0,0,0,0,0,0);
     if(isset($_GET['ID'])){
        $reponse=$AC->listerID($_SESSION['nom'],$_SESSION['password'],$_GET['ID']);
 

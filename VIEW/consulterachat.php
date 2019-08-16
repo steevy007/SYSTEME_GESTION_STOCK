@@ -3,7 +3,7 @@
   $username=$_SESSION['nom'];
   $password=$_SESSION['password'];
   require_once('../MODEL/achat.php');
-  $AC=new achat("",0,0,0,0);
+  $AC=new achat("",0,0,0,0,0,0);
   $reponse=$AC->listerAC($username,$password);
 ?>
 <!DOCTYPE html>
@@ -38,44 +38,33 @@
     </div>
     <table class="myTable table hover">
     <thead>
-            <tr style="font-size:9px;font-weight: bolder">
+            <tr style="font-size:14px;font-weight: bolder">
                 <th>IDAchat</th>
                 <th>IDClient</th>
                 <th>IDArticle</th>
                 <th>Q%</th>
                 <th>Date</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Adresse</th>
-                <th>C-Postal</th>
-                <th>Ville</th>
-                <th>Pays</th>
-                <th>Tel</th>
-                <th>N-Art</th>
-                <th>Desc-Art</th>
-                <th>Prix-Art</th>
+                <th>Nom Client</th>
+                <th>Nom Article</th>
+                <th>Prix Article</th>
+                <th>Prix Total</th>
+               
             </tr>
         </thead>
         <tbody>
             <?php
                 while($data=mysqli_fetch_array($reponse)){
             ?>
-                    <tr style="font-size:8px;font-weight: bolder">
+                    <tr style="font-size:11px;font-weight: bolder">
                         <td><?php print($data[0]) ?></td>
                         <td><?php print($data[1]) ?></td>
                         <td><?php print($data[2]) ?></td>
                         <td><?php print($data[3]) ?></td>
                         <td><?php print($data[4]) ?></td>
-                        <td><?php print($data[6]) ?></td>
-                        <td><?php print($data[7]) ?></td>
                         <td><?php print($data[8]) ?></td>
-                        <td><?php print($data[9]) ?></td>
-                        <td><?php print($data[10]) ?></td>
-                        <td><?php print($data[11]) ?></td>
-                        <td><?php print($data[12]) ?></td>
-                        <td><?php print($data[14]) ?></td>
-                        <td><?php print($data[15]) ?></td>
                         <td><?php print($data[16]) ?></td>
+                        <td><?php print($data[18]) ?></td>
+                        <td><?php print($data[5]) ?></td>
                         <?php
                         if($username=='STEEVE'){
                     ?>
@@ -91,22 +80,17 @@
             ?>
         </tbody>
         <tfoot>
-        <tr style="font-size:9px;font-weight: bolder">
+        <tr style="font-size:14px;font-weight: bolder">
                 <th>IDAchat</th>
                 <th>IDClient</th>
                 <th>IDArticle</th>
                 <th>Q%</th>
                 <th>Date</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Adresse</th>
-                <th>C-Postal</th>
-                <th>Ville</th>
-                <th>Pays</th>
-                <th>Tel</th>
+                <th>Nom Client</th>
+                <th>Nom Article</th>
+                <th>Prix Article</th>
+                <th>Prix Total</th>
                
-                <th>Desc-Art</th>
-                <th>Prix-Art</th>
             </tr>
         </tfoot>
     

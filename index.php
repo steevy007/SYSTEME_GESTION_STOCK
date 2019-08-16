@@ -13,6 +13,26 @@ session_start();
     <title>Login</title>
 </head>
 <body>
+<?php
+                   
+                   
+                   if(isset($_POST['nom'])){
+                       //$result=$con->connecter($_POST['nom'],$_POST['password']);
+                       $con=new connexion("","");
+                       $con->setUsername($_POST['nom']);
+                       $con->setPassword($_POST['password']);
+                       $reponse=$con->connecter($con->getUsername(),$con->getPassword());
+                       if($reponse==true){
+                           header('Location:VIEW/dashboard.php');
+                       $_SESSION['nom']=$con->getUsername();
+                       $_SESSION['password']=$con->getPassword();
+                      
+                       }else{
+                           $message='Nom ou Mot de passe incorrect';
+                       }
+                   }
+                  
+               ?>
     <div class="content">
         <div class="box1">
             <form action="" <?php print($_SERVER['PHP_SELF']); ?> method="POST">
@@ -25,32 +45,13 @@ session_start();
                     <input type="password" name="password" required placeholder="votre mot de passe">
                 </div>
                 
-                <center><a href="VIEW/dashboard.php"><?php print $message ?></a></center>
+                <center style="color:red"><i><b><?php print $message ?></b></i></center>
                 <div class="btn" style="margin-top: 5px">
                     <button type="submit" value="Connecter" name="btn">Connecter</button>
                 </div>
             </form>
         </div>
-        <?php
-                   
-                   
-                    if(isset($_POST['nom'])){
-                        //$result=$con->connecter($_POST['nom'],$_POST['password']);
-                        $con=new connexion("","");
-                        $con->setUsername($_POST['nom']);
-                        $con->setPassword($_POST['password']);
-                        $reponse=$con->connecter($con->getUsername(),$con->getPassword());
-                        if($reponse==true){
-                            header('Location:VIEW/dashboard.php');
-                        $_SESSION['nom']=$con->getUsername();
-                        $_SESSION['password']=$con->getPassword();
-                       
-                        }else{
-                            
-                        }
-                    }
-                   
-                ?>
+     
     </div>
 </body>
 </html>

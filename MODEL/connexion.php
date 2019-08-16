@@ -20,10 +20,10 @@
 
         //methode permettant de faire la connexion;
         public function connecter($nom,$pass){
-            if($nom=='SANON' and $pass=='sanon@@2017'){
+            if($nom=='SANON' and $pass=='comptable'){
                 $link = mysqli_connect('localhost',$nom,$pass,'bon_bagay') or die(mysqli_error($link));
                 return true;
-            }elseif($nom=='STEEVE' and $pass=='steeve@@2017'){
+            }elseif($nom=='STEEVE' and $pass=='vendeur'){
                 $link = mysqli_connect('localhost',$nom,$pass,'bon_bagay') or die(mysqli_error($link));
                 return true;
             }else{
